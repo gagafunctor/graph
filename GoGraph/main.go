@@ -53,6 +53,9 @@ func findMin(S map[int]point) int {
 func Dijkstra(G graph, start int) {
 	setUp(G, start)
 	Q := make(map[int]point)
+	// IMPORTANT REMARK : the data structure for Q should be an implementation of a priority queue, like a Fibonacci heap for example,
+	// in order not to have to go throught all the structure when calling findMin... This will be corrected in a later commit to enhance 
+	// the performance...
 	for k, v := range G.points {
 		Q[k] = v
 	}
