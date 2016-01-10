@@ -1,1 +1,11 @@
-this is the readme for the installation of go and how to run my project :-)
+GoGraph takes in input a text file describing a graph and asking for a shortest path between a starting node and a destination ; it uses the dijkstra algorithm to do so.
+
+How to get GoGraph running :
+1. install go (tutorial here : https://golang.org/doc/install)
+2. copy the GoGraph folder into your src folder at your GOPATH address
+3. copy the graph.txt file into /tmp, or create your own graph.txt file, with the 
+	following conventions : 
+	- first line has to be start|end with start and end being the ints 			  corresponding to the starting and destination nodes 
+	- next is your graph description : each line will represent an edge of your 	  graph, with the convention  start|end| weight (for example 1|2|3.5 is an 		  edge from node 1 to node 2 with a 3.5 weight )
+4. perform go install on GoGraph
+5. you can run the program : it will print you the shortest path from start to end, 	with its length 
